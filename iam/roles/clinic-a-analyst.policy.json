@@ -1,0 +1,74 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "RunQueriesInOwnWorkgroupOnly",
+      "Effect": "Allow",
+      "Action": [
+        "athena:StartQueryExecution",
+        "athena:GetQueryExecution",
+        "athena:GetQueryResults",
+        "athena:StopQueryExecution",
+        "athena:GetWorkGroup"
+      ],
+      "Resource": "arn:aws:athena:us-east-1:004716017211:workgroup/marrowick-clinic-a"
+    },
+    {
+      "Sid": "WriteOwnQueryResultsOnly",
+      "Effect": "Allow",
+      "Action": [
+        "s3:GetObject",
+        "s3:PutObject",
+        "s3:GetBucketLocation",
+        "s3:ListBucket"
+      ],
+      "Resource": [
+        "arn:aws:s3:::marrowick-athena-results-004716017211",
+        "arn:aws:s3:::marrowick-athena-results-004716017211/marrowick-clinic-a/*"
+      ]
+    },
+    {
+      "Sid": "LakeFormationVendedCredentials",
+      "Effect": "Allow",
+      "Action": "lakeformation:GetDataAccess",
+      "Resource": "*"
+    },
+    {
+      "Sid": "ReadCatalogForCuratedDbOnly",
+      "Effect": "Allow",
+      "Action": [
+        "glue:GetDatabase",
+        "glue:GetTable",
+        "glue:GetTables",
+        "glue:GetPartitions"
+      ],
+      "Resource": [
+        "arn:aws:glue:us-east-1:004716017211:catalog",
+        "arn:aws:glue:us-east-1:004716017211:database/marrowick_curated",
+        "arn:aws:glue:us-east-1:004716017211:table/marrowick_curated/*"
+      ]
+    },
+    {
+      "Sid": "DenyDirectS3AccessToTenantData",
+      "Effect": "Deny",
+      "Action": "s3:*",
+      "Resource": [
+        "arn:aws:s3:::marrowick-raw-004716017211",
+        "arn:aws:s3:::marrowick-raw-004716017211/*",
+        "arn:aws:s3:::marrowick-quarantine-004716017211",
+        "arn:aws:s3:::marrowick-quarantine-004716017211/*",
+        "arn:aws:s3:::marrowick-curated-004716017211",
+        "arn:aws:s3:::marrowick-curated-004716017211/*"
+      ]
+    },
+    {
+      "Sid": "DenyAuditDatabase",
+      "Effect": "Deny",
+      "Action": "glue:*",
+      "Resource": [
+        "arn:aws:glue:us-east-1:004716017211:database/marrowick_audit",
+        "arn:aws:glue:us-east-1:004716017211:table/marrowick_audit/*"
+      ]
+    }
+  ]
+}

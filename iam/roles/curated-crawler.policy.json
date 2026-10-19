@@ -1,0 +1,58 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "ReadCuratedZone",
+      "Effect": "Allow",
+      "Action": [
+        "s3:GetObject",
+        "s3:ListBucket"
+      ],
+      "Resource": [
+        "arn:aws:s3:::marrowick-curated-004716017211",
+        "arn:aws:s3:::marrowick-curated-004716017211/*"
+      ]
+    },
+    {
+      "Sid": "UseDataKeyOnlyViaS3",
+      "Effect": "Allow",
+      "Action": [
+        "kms:Decrypt"
+      ],
+      "Resource": "arn:aws:kms:us-east-1:004716017211:key/22bce328-0375-4cd6-a3cf-6df93b007a2b",
+      "Condition": {
+        "StringEquals": {
+          "kms:ViaService": "s3.us-east-1.amazonaws.com"
+        }
+      }
+    },
+    {
+      "Sid": "ManageCuratedCatalogOnly",
+      "Effect": "Allow",
+      "Action": [
+        "glue:GetDatabase",
+        "glue:GetTable",
+        "glue:CreateTable",
+        "glue:UpdateTable",
+        "glue:GetPartitions",
+        "glue:BatchCreatePartition",
+        "glue:BatchUpdatePartition"
+      ],
+      "Resource": [
+        "arn:aws:glue:us-east-1:004716017211:catalog",
+        "arn:aws:glue:us-east-1:004716017211:database/marrowick_curated",
+        "arn:aws:glue:us-east-1:004716017211:table/marrowick_curated/*"
+      ]
+    },
+    {
+      "Sid": "WriteCrawlerLogs",
+      "Effect": "Allow",
+      "Action": [
+        "logs:CreateLogGroup",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+      ],
+      "Resource": "arn:aws:logs:us-east-1:004716017211:log-group:/aws-glue/crawlers:*"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "InvokeScannerOnly",
+      "Effect": "Allow",
+      "Action": "lambda:InvokeFunction",
+      "Resource": "arn:aws:lambda:us-east-1:004716017211:function:marrowick-pii-scan"
+    },
+    {
+      "Sid": "ReadRawSource",
+      "Effect": "Allow",
+      "Action": "s3:GetObject",
+      "Resource": "arn:aws:s3:::marrowick-raw-004716017211/*"
+    },
+    {
+      "Sid": "WriteQuarantineOrCurated",
+      "Effect": "Allow",
+      "Action": "s3:PutObject",
+      "Resource": [
+        "arn:aws:s3:::marrowick-quarantine-004716017211/*",
+        "arn:aws:s3:::marrowick-curated-004716017211/*"
+      ]
+    },
+    {
+      "Sid": "UseDataKeyOnlyViaS3",
+      "Effect": "Allow",
+      "Action": [
+        "kms:Decrypt",
+        "kms:GenerateDataKey"
+      ],
+      "Resource": "arn:aws:kms:us-east-1:004716017211:key/22bce328-0375-4cd6-a3cf-6df93b007a2b",
+      "Condition": {
+        "StringEquals": {
+          "kms:ViaService": "s3.us-east-1.amazonaws.com"
+        }
+      }
+    },
+    {
+      "Sid": "PublishGateAlertsOnly",
+      "Effect": "Allow",
+      "Action": "sns:Publish",
+      "Resource": "arn:aws:sns:us-east-1:004716017211:marrowick-pii-gate-alerts"
+    }
+  ]
+}

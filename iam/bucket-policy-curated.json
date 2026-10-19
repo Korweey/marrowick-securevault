@@ -1,0 +1,108 @@
+{
+  "Version": "2012-10-17",
+  "Id": "marrowick-curated-004716017211-policy",
+  "Statement": [
+    {
+      "Sid": "DenyInsecureTransport",
+      "Effect": "Deny",
+      "Principal": "*",
+      "Action": "s3:*",
+      "Resource": [
+        "arn:aws:s3:::marrowick-curated-004716017211",
+        "arn:aws:s3:::marrowick-curated-004716017211/*"
+      ],
+      "Condition": {
+        "Bool": {
+          "aws:SecureTransport": "false"
+        }
+      }
+    },
+    {
+      "Sid": "DenyNonKmsEncryptionHeader",
+      "Effect": "Deny",
+      "Principal": "*",
+      "Action": "s3:PutObject",
+      "Resource": "arn:aws:s3:::marrowick-curated-004716017211/*",
+      "Condition": {
+        "Null": {
+          "s3:x-amz-server-side-encryption": "false"
+        },
+        "StringNotEquals": {
+          "s3:x-amz-server-side-encryption": "aws:kms"
+        }
+      }
+    },
+    {
+      "Sid": "DenyWrongKmsKey",
+      "Effect": "Deny",
+      "Principal": "*",
+      "Action": "s3:PutObject",
+      "Resource": "arn:aws:s3:::marrowick-curated-004716017211/*",
+      "Condition": {
+        "Null": {
+          "s3:x-amz-server-side-encryption-aws-kms-key-id": "false"
+        },
+        "StringNotEquals": {
+          "s3:x-amz-server-side-encryption-aws-kms-key-id": "arn:aws:kms:us-east-1:004716017211:key/22bce328-0375-4cd6-a3cf-6df93b007a2b"
+        }
+      }
+    },
+    {
+      "Sid": "TenantIsolationClinicA",
+      "Effect": "Deny",
+      "Principal": "*",
+      "Action": [
+        "s3:GetObject",
+        "s3:PutObject",
+        "s3:DeleteObject"
+      ],
+      "Resource": "arn:aws:s3:::marrowick-curated-004716017211/clinic-a/*",
+      "Condition": {
+        "Null": {
+          "aws:PrincipalTag/tenant": "false"
+        },
+        "StringNotEquals": {
+          "aws:PrincipalTag/tenant": "clinic-a"
+        }
+      }
+    },
+    {
+      "Sid": "TenantIsolationClinicB",
+      "Effect": "Deny",
+      "Principal": "*",
+      "Action": [
+        "s3:GetObject",
+        "s3:PutObject",
+        "s3:DeleteObject"
+      ],
+      "Resource": "arn:aws:s3:::marrowick-curated-004716017211/clinic-b/*",
+      "Condition": {
+        "Null": {
+          "aws:PrincipalTag/tenant": "false"
+        },
+        "StringNotEquals": {
+          "aws:PrincipalTag/tenant": "clinic-b"
+        }
+      }
+    },
+    {
+      "Sid": "TenantIsolationClinicC",
+      "Effect": "Deny",
+      "Principal": "*",
+      "Action": [
+        "s3:GetObject",
+        "s3:PutObject",
+        "s3:DeleteObject"
+      ],
+      "Resource": "arn:aws:s3:::marrowick-curated-004716017211/clinic-c/*",
+      "Condition": {
+        "Null": {
+          "aws:PrincipalTag/tenant": "false"
+        },
+        "StringNotEquals": {
+          "aws:PrincipalTag/tenant": "clinic-c"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+tenant_id,encounter_id,pii_type
+clinic-a,CLINIC-A-00001,full_contact
+clinic-a,CLINIC-A-00024,full_contact
+clinic-a,CLINIC-A-00104,full_contact
+clinic-a,CLINIC-A-00133,email
+clinic-b,CLINIC-B-00022,full_contact
+clinic-b,CLINIC-B-00067,sin
+clinic-b,CLINIC-B-00087,full_contact
+clinic-b,CLINIC-B-00094,name_and_health_card
+clinic-b,CLINIC-B-00143,name_and_health_card
+clinic-b,CLINIC-B-00147,name_and_health_card
+clinic-c,CLINIC-C-00015,email
+clinic-c,CLINIC-C-00049,name_and_health_card
+clinic-c,CLINIC-C-00104,name_and_health_card
+clinic-c,CLINIC-C-00159,email

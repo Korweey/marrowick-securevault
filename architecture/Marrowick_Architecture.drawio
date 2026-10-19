@@ -1,0 +1,163 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Marrowick Architecture" id="arch">
+    <mxGraphModel dx="1800" dy="1000" grid="1" gridSize="10" page="1" pageWidth="1980" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;Marrowick Health Analytics – SecureVault Governance Platform&lt;/b&gt;&lt;br&gt;&lt;font style='font-size:12px'&gt;CCGC 5506 Mid-Term Project 4 · Group H: Saheedat O. Abbas (N10038753) &amp;amp; Qawiyy A. Rabiu (N10038749)&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="1100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cloud" value="AWS Cloud (AWS Academy Learner Lab)" style="points=[];outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=1;container=0;pointerEvents=0;collapsible=0;recursiveResize=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_aws_cloud_alt;strokeColor=#232F3E;fillColor=none;verticalAlign=top;align=left;spacingLeft=30;fontColor=#232F3E;dashed=0;" vertex="1" parent="1">
+          <mxGeometry x="250" y="100" width="1440" height="870" as="geometry" />
+        </mxCell>
+        <mxCell id="region" value="Region: us-east-1" style="points=[];outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;container=0;pointerEvents=0;collapsible=0;recursiveResize=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_region;strokeColor=#00A4A6;fillColor=none;verticalAlign=top;align=left;spacingLeft=30;fontColor=#147EBA;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="135" width="1400" height="815" as="geometry" />
+        </mxCell>
+        <mxCell id="gate" value="" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FDF0F6;strokeColor=#E7157B;dashed=1;arcSize=3;" vertex="1" parent="1">
+          <mxGeometry x="640" y="300" width="520" height="420" as="geometry" />
+        </mxCell>
+        <mxCell id="audit" value="&lt;b&gt;Audit &amp;amp; Monitoring&lt;/b&gt; (runs continuously in the background)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#F4F4F4;strokeColor=#888888;dashed=1;arcSize=4;verticalAlign=top;align=left;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="290" y="750" width="1360" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="clinics" value="&lt;b&gt;Clinic Partners&lt;/b&gt;&lt;br&gt;(synthetic data sources)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#F4F4F4;strokeColor=#888888;verticalAlign=top;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="120" width="190" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="ca" value="&lt;b&gt;Clinic A&lt;/b&gt;&lt;br&gt;Brambleton Family Clinic" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#ffffff;strokeColor=#232F3E;" vertex="1" parent="1">
+          <mxGeometry x="60" y="175" width="150" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="cb" value="&lt;b&gt;Clinic B&lt;/b&gt;&lt;br&gt;Fenwick Ridge Medical Centre" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#ffffff;strokeColor=#232F3E;" vertex="1" parent="1">
+          <mxGeometry x="60" y="275" width="150" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="cc" value="&lt;b&gt;Clinic C&lt;/b&gt;&lt;br&gt;Aldermoor Community Health" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#ffffff;strokeColor=#232F3E;" vertex="1" parent="1">
+          <mxGeometry x="60" y="375" width="150" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="kms" value="&lt;b&gt;AWS KMS&lt;/b&gt;&lt;br&gt;Customer-managed key&lt;br&gt;(encrypts raw, quarantine&lt;br&gt;&amp;amp; curated buckets)" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#ffffff;dashed=0;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.key_management_service;fillColor=#DD344C;verticalLabelPosition=bottom;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="640" y="165" width="70" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="macie" value="&lt;b&gt;Amazon Macie&lt;/b&gt; (optional)&lt;br&gt;scheduled discovery&lt;br&gt;on tenant buckets" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#ffffff;dashed=0;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.macie;fillColor=#DD344C;verticalLabelPosition=bottom;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1300" y="165" width="70" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="iam" value="&lt;b&gt;IAM – LabRole&lt;/b&gt; (fixed)&lt;br&gt;least-privilege policies&lt;br&gt;documented as JSON" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#ffffff;dashed=0;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.identity_and_access_management;fillColor=#DD344C;verticalLabelPosition=bottom;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1500" y="165" width="70" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="raw" value="&lt;b&gt;S3 Raw / Landing bucket&lt;/b&gt;&lt;br&gt;raw/clinic-a/&lt;br&gt;raw/clinic-b/&lt;br&gt;raw/clinic-c/&lt;br&gt;(SSE-KMS + per-tenant&lt;br&gt;bucket policies)" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#ffffff;dashed=0;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.s3;fillColor=#7AA116;verticalLabelPosition=bottom;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="320" y="400" width="78" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="glue" value="&lt;b&gt;AWS Glue Crawler&lt;/b&gt;&lt;br&gt;+ Data Catalog" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#ffffff;dashed=0;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.glue;fillColor=#8C4FFF;verticalLabelPosition=bottom;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="480" y="400" width="78" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="sfn" value="&lt;b&gt;AWS Step Functions&lt;/b&gt; – PII gate workflow" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#ffffff;dashed=0;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.step_functions;fillColor=#E7157B;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;spacingLeft=6;" vertex="1" parent="1">
+          <mxGeometry x="655" y="312" width="48" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="lambda" value="&lt;b&gt;AWS Lambda&lt;/b&gt;&lt;br&gt;regex PII/PHI scan&lt;br&gt;(health card, SIN, email)" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#ffffff;dashed=0;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.lambda;fillColor=#ED7100;verticalLabelPosition=bottom;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="680" y="430" width="78" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="choice" value="&lt;b&gt;Choice:&lt;/b&gt;&lt;br&gt;PII found?" style="rhombus;whiteSpace=wrap;html=1;fontSize=11;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="830" y="424" width="110" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="quar" value="&lt;b&gt;S3 Quarantine bucket&lt;/b&gt;&lt;br&gt;blocked batch (SSE-KMS)" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#ffffff;dashed=0;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.s3;fillColor=#7AA116;verticalLabelPosition=bottom;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="846" y="570" width="78" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="sns" value="&lt;b&gt;Amazon SNS&lt;/b&gt;&lt;br&gt;gate-failure alert" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#ffffff;dashed=0;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.sns;fillColor=#E7157B;verticalLabelPosition=bottom;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="570" width="78" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="secteam" value="Security / Governance&lt;br&gt;team (email)" style="sketch=0;outlineConnect=0;fontColor=#232F3E;fillColor=#232F3D;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=11;aspect=fixed;shape=mxgraph.aws4.user;" vertex="1" parent="1">
+          <mxGeometry x="1230" y="580" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cur" value="&lt;b&gt;S3 Curated bucket&lt;/b&gt;&lt;br&gt;curated/clinic-a|b|c/&lt;br&gt;(SSE-KMS)" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#ffffff;dashed=0;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.s3;fillColor=#7AA116;verticalLabelPosition=bottom;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1220" y="424" width="78" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="lf" value="&lt;b&gt;Access layer&lt;/b&gt;&lt;br&gt;Athena views (enforced)&lt;br&gt;Lake Formation filters&lt;br&gt;(design-only – blocked in lab)" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#ffffff;dashed=0;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.lake_formation;fillColor=#8C4FFF;verticalLabelPosition=bottom;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1380" y="424" width="78" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="athena" value="&lt;b&gt;Amazon Athena&lt;/b&gt;&lt;br&gt;analyst workgroup" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#ffffff;dashed=0;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.athena;fillColor=#8C4FFF;verticalLabelPosition=bottom;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1530" y="424" width="78" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="u1" value="&lt;b&gt;Clinic Analyst&lt;/b&gt;&lt;br&gt;own clinic rows only" style="sketch=0;outlineConnect=0;fontColor=#232F3E;fillColor=#232F3D;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=11;aspect=fixed;shape=mxgraph.aws4.user;" vertex="1" parent="1">
+          <mxGeometry x="1760" y="320" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="u2" value="&lt;b&gt;Corporate Analyst&lt;/b&gt;&lt;br&gt;all clinics, no PII columns" style="sketch=0;outlineConnect=0;fontColor=#232F3E;fillColor=#232F3D;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=11;aspect=fixed;shape=mxgraph.aws4.user;" vertex="1" parent="1">
+          <mxGeometry x="1760" y="500" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lfnote" value="&lt;b&gt;Access separation (tested 7/7)&lt;/b&gt;&lt;br&gt;• Clinic analyst: view_clinic_a_analyst – own rows, no notes_field&lt;br&gt;• Corporate analyst: view_corporate_analyst – all rows, no notes_field / patient_ref" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#F3EDFF;strokeColor=#8C4FFF;align=left;spacingLeft=6;" vertex="1" parent="1">
+          <mxGeometry x="1690" y="640" width="270" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="trail" value="&lt;b&gt;AWS CloudTrail&lt;/b&gt;&lt;br&gt;records all API calls" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#ffffff;dashed=0;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.cloudtrail;fillColor=#E7157B;verticalLabelPosition=bottom;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="330" y="790" width="70" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="trails3" value="&lt;b&gt;S3 CloudTrail logs&lt;/b&gt;&lt;br&gt;bucket (validated)" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#ffffff;dashed=0;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.s3;fillColor=#7AA116;verticalLabelPosition=bottom;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="560" y="790" width="70" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="athena2" value="&lt;b&gt;Amazon Athena&lt;/b&gt;&lt;br&gt;audit queries" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#ffffff;dashed=0;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.athena;fillColor=#8C4FFF;verticalLabelPosition=bottom;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="790" y="790" width="70" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="auditq" value="&lt;b&gt;Audit questions answered&lt;/b&gt;&lt;br&gt;Q1 Who accessed curated clinic-c data?&lt;br&gt;Q2 Which calls changed bucket security?&lt;br&gt;Q3 Denied / anomalous attempts" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#ffffff;strokeColor=#888888;align=left;spacingLeft=6;" vertex="1" parent="1">
+          <mxGeometry x="960" y="785" width="300" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="cw" value="&lt;b&gt;Amazon CloudWatch&lt;/b&gt;&lt;br&gt;Lambda / Step Functions&lt;br&gt;logs &amp;amp; metrics" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#ffffff;dashed=0;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.cloudwatch_2;fillColor=#E7157B;verticalLabelPosition=bottom;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1340" y="790" width="70" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="legend" value="&lt;b&gt;Legend&lt;/b&gt;&lt;br&gt;━━▶ data flow (numbered steps)&lt;br&gt;- - ▶ encryption / control / logging&lt;br&gt;&lt;br&gt;&lt;b&gt;Steps&lt;/b&gt;&lt;br&gt;1 Upload clinic CSVs&lt;br&gt;2 Crawl &amp;amp; catalog&lt;br&gt;3 Regex PII scan&lt;br&gt;4 Clean or flagged?&lt;br&gt;5a Clean → curated&lt;br&gt;5b Flagged → quarantine + SNS&lt;br&gt;6 Access layer (Athena views)&lt;br&gt;7 Analysts query via Athena" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#ffffff;strokeColor=#888888;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="40" y="520" width="190" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="1. Upload CSV" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#232F3E;strokeWidth=2;entryX=0;entryY=0.5;" edge="1" parent="1" source="ca" target="raw">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#232F3E;strokeWidth=2;entryX=0;entryY=0.5;" edge="1" parent="1" source="cb" target="raw">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#232F3E;strokeWidth=2;entryX=0;entryY=0.5;" edge="1" parent="1" source="cc" target="raw">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" value="2. Crawl" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#232F3E;strokeWidth=2;" edge="1" parent="1" source="raw" target="glue">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" value="start gate" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#232F3E;strokeWidth=2;" edge="1" parent="1" source="glue" target="lambda">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" value="3. Scan" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#232F3E;strokeWidth=2;" edge="1" parent="1" source="lambda" target="choice">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" value="5a. NO – clean → promote" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#232F3E;strokeWidth=2;" edge="1" parent="1" source="choice" target="cur">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" value="5b. YES – quarantine" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#232F3E;strokeWidth=2;" edge="1" parent="1" source="choice" target="quar">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" value="notify" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#232F3E;strokeWidth=2;" edge="1" parent="1" source="quar" target="sns">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" value="email" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#232F3E;strokeWidth=2;" edge="1" parent="1" source="sns" target="secteam">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" value="6. Catalog" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#232F3E;strokeWidth=2;" edge="1" parent="1" source="cur" target="lf">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" value="filtered" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#232F3E;strokeWidth=2;" edge="1" parent="1" source="lf" target="athena">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" value="7. Results" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#232F3E;strokeWidth=2;entryX=0;entryY=0.5;" edge="1" parent="1" source="athena" target="u1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#232F3E;strokeWidth=2;entryX=0;entryY=0.5;" edge="1" parent="1" source="athena" target="u2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="k1" value="encrypts" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontSize=10;labelBackgroundColor=#ffffff;dashed=1;strokeColor=#888888;strokeWidth=1;exitX=0;exitY=0.5;entryX=0.5;entryY=0;" edge="1" parent="1" source="kms" target="raw">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="k2" value="encrypts" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontSize=10;labelBackgroundColor=#ffffff;dashed=1;strokeColor=#888888;strokeWidth=1;exitX=1;exitY=0.5;entryX=0.5;entryY=0;" edge="1" parent="1" source="kms" target="cur">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a1" value="log files" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#232F3E;strokeWidth=2;" edge="1" parent="1" source="trail" target="trails3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a2" value="query" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#232F3E;strokeWidth=2;" edge="1" parent="1" source="trails3" target="athena2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a3" value="answers" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#232F3E;strokeWidth=2;" edge="1" parent="1" source="athena2" target="auditq">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

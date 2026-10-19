@@ -1,0 +1,63 @@
+{
+  "Comment": "Marrowick PII gate: scan a raw clinic batch, then promote to curated or quarantine + notify. Group H (Rabiu, Abbas).",
+  "StartAt": "ScanForPII",
+  "States": {
+    "ScanForPII": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::lambda:invoke",
+      "Parameters": {
+        "FunctionName": "arn:aws:lambda:us-east-1:004716017211:function:marrowick-pii-scan",
+        "Payload.$": "$"
+      },
+      "ResultSelector": { "result.$": "$.Payload" },
+      "ResultPath": "$.scan",
+      "Next": "PIIDetected?"
+    },
+    "PIIDetected?": {
+      "Type": "Choice",
+      "Choices": [
+        { "Variable": "$.scan.result.pii_found", "BooleanEquals": true, "Next": "QuarantineBatch" }
+      ],
+      "Default": "PromoteToCurated"
+    },
+    "QuarantineBatch": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::aws-sdk:s3:copyObject",
+      "Parameters": {
+        "Bucket": "marrowick-quarantine-004716017211",
+        "CopySource.$": "States.Format('{}/{}', $.bucket, $.key)",
+        "Key.$": "$.key"
+      },
+      "ResultPath": null,
+      "Next": "NotifySecurityTeam"
+    },
+    "NotifySecurityTeam": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::sns:publish",
+      "Parameters": {
+        "TopicArn": "arn:aws:sns:us-east-1:004716017211:marrowick-pii-gate-alerts",
+        "Subject": "Marrowick PII gate: batch QUARANTINED",
+        "Message.$": "States.Format('PII/PHI detected – batch blocked from curated zone.\n\nTenant: {}\nObject: s3://{}/{}\nRows scanned: {}\nFlagged encounter IDs: {}\nFindings by type: {}\n\nBatch copied to marrowick-quarantine-004716017211. Follow the incident-response runbook. (No PII values are included in this alert.)', $.scan.result.tenant, $.bucket, $.key, $.scan.result.rows_scanned, States.JsonToString($.scan.result.flagged_rows), States.JsonToString($.scan.result.counts))"
+      },
+      "ResultPath": null,
+      "Next": "GateBlocked"
+    },
+    "GateBlocked": {
+      "Type": "Fail",
+      "Error": "PIIDetected",
+      "Cause": "Batch contained PII/PHI and was quarantined; it did not reach the curated zone."
+    },
+    "PromoteToCurated": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::aws-sdk:s3:copyObject",
+      "Parameters": {
+        "Bucket": "marrowick-curated-004716017211",
+        "CopySource.$": "States.Format('{}/{}', $.bucket, $.key)",
+        "Key.$": "$.key"
+      },
+      "ResultPath": null,
+      "Next": "BatchPromoted"
+    },
+    "BatchPromoted": { "Type": "Succeed" }
+  }
+}
