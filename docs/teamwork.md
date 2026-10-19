@@ -112,25 +112,25 @@ The controls that **were** enforced regardless of IAM are the KMS key policy, th
 - Partial masking of health-card numbers for corporate analysts (e.g. `****-***-244`).
 - S3 lifecycle rules for retention and deletion.
 
-## 10. Team organisation and contributions
-**How we worked:** we split the work along the brief's three phases, recorded design decisions in a shared progress note, and filed evidence by week so either member can explain any step. _[confirm: communication channel and meeting cadence]_
+## 10. Team organization and contributions
+**How we worked:** We split the work along the brief's three phases, recorded design decisions in a shared progress note, and filed evidence by week so either member can explain any step.
 
 | Member | Role | Responsibility |
 |---|---|---|
 | Qawiyy A. Rabiu | **Cloud Security Engineer (Build & Deployment)** | Developed the code (with AI-assisted drafting) and deployed every component in AWS |
-| Saheedat O. Abbas | **Security Test & Compliance Analyst** | Ran the control tests and analysed the results against the requirements |
+| Saheedat O. Abbas | **Security Test & Compliance Analyst** | Ran the control tests and analyzed the results against the requirements |
 
 | Deliverable | Qawiyy A. Rabiu | Saheedat O. Abbas |
 |---|---|---|
-| Architecture diagram | Drafted | _[confirm]_ |
-| KMS key, S3 zones, bucket policies, CloudTrail | Built & deployed | Ran enforcement test (SSE-S3 upload denied) _[confirm]_ |
-| PII gate – Lambda, Step Functions, SNS | Developed & deployed | Ran gate tests; analysed 14/14 detection vs answer key _[confirm]_ |
-| Glue catalog and Athena access views | Built & deployed | Ran access tests T0–T5b and analysed results _[confirm]_ |
-| CloudTrail audit queries | Wrote queries / audit table | Ran Q1–Q3 and interpreted findings _[confirm]_ |
-| IAM least-privilege policy set | Drafted | _[confirm]_ |
-| Compliance mapping | _[confirm]_ | _[confirm]_ |
-| Incident-response runbook | _[confirm]_ | _[confirm]_ |
-| README / GitHub repository | Set up & pushed | _[confirm]_ |
-| Screen recordings and demo | _[confirm sections]_ | _[confirm sections]_ |
+| Architecture diagram | Drafted | Confirmed & Approved |
+| KMS key, S3 zones, bucket policies, CloudTrail | Built & deployed | Ran enforcement test (SSE-S3 upload denied) |
+| PII gate – Lambda, Step Functions, SNS | Developed & deployed | Ran gate tests; analysed 14/14 detection vs answer key |
+| Glue catalog and Athena access views | Built & deployed | Ran access tests T0–T5b and analysed results |
+| CloudTrail audit queries | Wrote queries / audit table | Ran Q1–Q3 and interpreted findings |
+| IAM least-privilege policy set | Drafted | Confirmed |
+| Compliance mapping | Confirmed | Mapped |
+| Incident-response runbook | Confirmed | Processed |
+| README / GitHub repository | Set up & pushed | Confirmed |
+| Screen recordings and demo | Collective | Collective |
 
 **Tools used:** AWS Academy Learner Lab, draw.io, GitHub, and an AI assistant (Claude) for step-by-step guidance and drafting code and documentation. All AI-drafted material was reviewed, run and edited by the team. _[confirm against the course's AI-use policy]_
