@@ -129,8 +129,8 @@ The controls that **were** enforced regardless of IAM are the KMS key policy, th
 | CloudTrail audit queries | Wrote queries / audit table | Ran Q1–Q3 and interpreted findings |
 | IAM least-privilege policy set | Drafted | Confirmed |
 | Compliance mapping | Confirmed | Mapped |
-| Incident-response runbook | Confirmed | Processed |
+| Incident-response runbook | Confirmed | Tested Scenerios |
 | README / GitHub repository | Set up & pushed | Confirmed |
 | Screen recordings and demo | Collective | Collective |
 
-**Tools used:** AWS Academy Learner Lab, draw.io, GitHub, and an AI assistant (Claude) for step-by-step guidance and drafting code and documentation. All AI-drafted material was reviewed, run and edited by the team. _[confirm against the course's AI-use policy]_
+**Tools used:** AWS Academy Learner Lab, draw.io, GitHub, and an AI assistant (Claude) for guidance, drafting code, and documentation. All AI-drafted material was reviewed, run and edited by the team.
