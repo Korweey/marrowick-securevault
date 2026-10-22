@@ -6,9 +6,9 @@ File: README.md – Project overview and reproduction guide
 
 # Marrowick Health Analytics – SecureVault Governance Platform
 
-> **Demo video:** [Download the 8-minute demo (MP4, 148 MB)](https://github.com/Korweey/marrowick-securevault/raw/main/evidence/week3/group-h-marrowick-demo.mp4). GitHub can't play videos this large in the browser, so it downloads and plays in any video player.
+> **Demo video:** [Download the 6½-minute demo (MP4, 148 MB)](https://github.com/Korweey/marrowick-securevault/raw/main/evidence/week3/group-h-marrowick-demo.mp4). GitHub can't play videos this large in the browser, so it downloads and plays in any video player.
 
-**CCGC 5506 Mid-Term · Project 4 · Humber Polytechnic, Fall 2026**
+**CCGC 5506 Mid-Term · Project 4 · Humber Polytechnic, Fall 2026**<br>
 **Group H:** Qawiyy A. Rabiu (N10038749) · Saheedat O. Abbas (N10038753)
 
 Governance, security and compliance guardrails for a **multi-tenant health-analytics data lake** on AWS, built and tested in an AWS Academy Learner Lab. Three fictional clinics send encounter data; the platform encrypts it, keeps each clinic's data separate, **blocks any batch containing PII/PHI** from reaching the analytics zone, restricts what each analyst role can see, and keeps an auditable trail of every access.
