@@ -6,7 +6,7 @@ File: README.md – Project overview and reproduction guide
 
 # Marrowick Health Analytics – SecureVault Governance Platform
 
-> **Demo video:** [evidence/week3/group-h-marrowick-demo.mp4](evidence/week3/group-h-marrowick-demo.mp4) (148 MB). Open the link and click **Download** to play it.
+> **Demo video:** [Download the 8-minute demo (MP4, 148 MB)](https://github.com/Korweey/marrowick-securevault/raw/main/evidence/week3/group-h-marrowick-demo.mp4). GitHub can't play videos this large in the browser, so it downloads and plays in any video player.
 
 **CCGC 5506 Mid-Term · Project 4 · Humber Polytechnic, Fall 2026**
 **Group H:** Qawiyy A. Rabiu (N10038749) · Saheedat O. Abbas (N10038753)
