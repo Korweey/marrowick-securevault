@@ -6,11 +6,9 @@ File: docs/teamwork.md – Team technical report: design rationale, trade-offs, 
 
 # Team Technical Report – Marrowick Health Analytics (SecureVault)
 
-**Group H:** Qawiyy A. Rabiu (N10038749) · Saheedat O. Abbas (N10038753)
-**Course:** CCGC 5506 Mid-Term, Project 4 · Humber Polytechnic · Fall 2026
-**Status:** Internal team report (optional submission)
-
-> Items marked _[confirm]_ are for both members to complete together before this report is shared, so that it accurately records who did what.
+**Group H:** Qawiyy A. Rabiu (N10038749) · Saheedat O. Abbas (N10038753)<br>
+**Course:** CCGC 5506 Mid-Term, Project 4 · Humber Polytechnic · Fall 2026<br>
+**Status:** Final · submitted as the project's written technical report (about 1,900 words)
 
 ---
 

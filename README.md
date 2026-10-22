@@ -9,6 +9,8 @@ File: README.md – Project overview and reproduction guide
 > **Demo video:** [Download the 6½-minute demo (MP4, 148 MB)](https://github.com/Korweey/marrowick-securevault/raw/main/evidence/week3/group-h-marrowick-demo.mp4). GitHub can't play videos this large in the browser, so it downloads and plays in any video player.
 >
 > **Slides:** [Download the presentation (PowerPoint, 765 KB)](https://github.com/Korweey/marrowick-securevault/raw/main/presentation/Marrowick_SecureVault_Group_H_Presentation.pptx)
+>
+> **Submission checklist:** [SUBMISSION.md](SUBMISSION.md) maps each of the five required artifacts to its file. **Technical report:** [docs/teamwork.md](docs/teamwork.md).
 
 **CCGC 5506 Mid-Term · Project 4 · Humber Polytechnic, Fall 2026**<br>
 **Group H:** Qawiyy A. Rabiu (N10038749) · Saheedat O. Abbas (N10038753)
@@ -57,8 +59,10 @@ Editable diagram: [`architecture/Marrowick_Architecture.drawio`](architecture/Ma
 | `iam/` | KMS key policy, bucket policies (deployed), role policies (design-only) – see `iam/README.md` |
 | `lakeformation/permission-matrix.md` | Lake Formation design (design-only) |
 | `tests/` | Offline scanner test + answer key |
-| `docs/` | Compliance mapping, incident-response runbook, teamwork, weekly progress logs |
-| `evidence/` | Screenshots per week (`issues/` = problems hit and fixed) |
+| `docs/` | Technical report (`teamwork.md`), compliance mapping, incident-response runbook, weekly progress logs |
+| `evidence/` | Screenshots per week (`issues/` = problems hit and fixed); `week3/` has the demo recording (Git LFS) |
+| `presentation/` | Presentation slides (PowerPoint) |
+| `SUBMISSION.md` | Where to find each required artifact |
 
 ## Reproduce from a fresh Learner Lab session (~60–90 min)
 Replace `004716017211` with your account ID everywhere (bucket names, ARNs in JSON/ASL files). Region **us-east-1**.
@@ -91,7 +95,8 @@ Views are a weaker control than Lake Formation (anyone who can read the base tab
 - [Compliance mapping (PIPEDA-style)](docs/compliance-mapping.md)
 - [Incident-response runbook](docs/incident-response-runbook.md)
 - [IAM policy set & deployability](iam/README.md)
-- [Team technical report & contributions](docs/teamwork.md)
+- [Written technical report & contributions](docs/teamwork.md)
+- [Submission checklist](SUBMISSION.md)
 - Weekly logs: [Week 1](docs/progress/week1-progress.md) · [Week 2](docs/progress/week2-progress.md) · [Week 3](docs/progress/week3-progress.md)
 
 ## Team

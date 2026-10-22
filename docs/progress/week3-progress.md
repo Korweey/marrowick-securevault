@@ -8,20 +8,20 @@ File: docs/progress/week3-progress.md – Week 3 progress log
 
 **Milestone (from brief):** Full governance package; live demo of the PII gate catching a bad record. Due October 23.
 
-**Scope change (instructor):** the 1,500–2,500-word technical report is now **optional**; replaced by a **teamwork document** and a **GitHub repository/profile**.
+**Technical report:** the 1,500–2,500-word written report is one of the five required artifacts. `docs/teamwork.md` (about 1,900 words) is our technical report.
 
 | Item | File | Status | Date |
 |---|---|---|---|
-| IAM least-privilege policy set + deployability annotations | `iam/README.md`, `iam/roles/*.json` | 📝 Drafted – team review | Oct 18 |
-| Compliance mapping (PIPEDA-style) + not-covered section | `docs/compliance-mapping.md` | 📝 Drafted – team review | Oct 18 |
-| Incident-response runbook | `docs/incident-response-runbook.md` | 📝 Drafted – team review | Oct 18 |
+| IAM least-privilege policy set + deployability annotations | `iam/README.md`, `iam/roles/*.json` | ✅ Final | Oct 18 |
+| Compliance mapping (PIPEDA-style) + not-covered section | `docs/compliance-mapping.md` | ✅ Final | Oct 18 |
+| Incident-response runbook | `docs/incident-response-runbook.md` | ✅ Final | Oct 18 |
 | Architecture diagram updated (Athena views enforced, LF design-only) | `architecture/` | ✅ | Oct 18 |
-| README (GitHub front page + reproduction guide) | `README.md` | 📝 Drafted | Oct 18 |
-| Team technical report (teamwork) | `docs/teamwork.md` | 📝 Draft – both members to confirm contributions | Oct 18 |
-| GitHub repository pushed | – | ⏳ | – |
-| Screen recordings of each stage | `evidence/week3/` | ⏳ | – |
-| Demo slides + rehearsal (live PII-gate failure) | – | ⏳ | – |
-| Technical report | – | Optional – not planned | – |
+| README (GitHub front page + reproduction guide) | `README.md` | ✅ Final | Oct 22 |
+| Team technical report (teamwork) | `docs/teamwork.md` | ✅ Final, contributions confirmed by both members | Oct 22 |
+| GitHub repository (public, both members contributing) | https://github.com/Korweey/marrowick-securevault | ✅ | Oct 18–22 |
+| Screen recording of each stage | `evidence/week3/group-h-marrowick-demo.mp4` (6½ min, Git LFS) | ✅ | Oct 22 |
+| Presentation slides | `presentation/Marrowick_SecureVault_Group_H_Presentation.pptx` | ✅ | Oct 22 |
+| Submission checklist | `SUBMISSION.md` | ✅ | Oct 22 |
 
 ## Issues encountered & resolutions
 | # | Issue | Impact | Resolution | Evidence |
