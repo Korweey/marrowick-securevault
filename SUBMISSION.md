@@ -8,7 +8,7 @@
 | 1 | Architecture diagram (every AWS service, direction of data flow) | `architecture/Marrowick_Architecture.drawio` and `architecture/Marrowick_Architecture_preview.png` |
 | 2 | Repository with all code and SQL + README to reproduce from a fresh Learner Lab | `src/lambda/`, `src/stepfunctions/`, `sql/`, `iam/`, `tests/`; rebuild steps in `README.md` |
 | 3 | Written technical report (1,500–2,500 words) | `docs/teamwork.md` (about 1,900 words: §4 design and trade-offs, §5 data quality and governance, §6 cost and performance, §8 lessons learned) |
-| 4 | Evidence of a working pipeline + sample query results | `evidence/week3/group-h-marrowick-demo.mp4` (6½ min); screenshots in `evidence/` (table below); test sign-off in `docs/progress/week3-progress.md` |
+| 4 | Evidence of a working pipeline + sample query results | `evidence/week3/group-h-marrowick-demo.mp4` (6 min, resubmitted Oct 23); screenshots in `evidence/` (table below); test sign-off in `docs/progress/week3-progress.md` |
 | 5 | 8-minute team presentation + 2 min Q&A | Delivered live in class; slides in `presentation/` |
 
 ## Evidence by pipeline stage

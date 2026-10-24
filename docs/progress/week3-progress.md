@@ -19,7 +19,7 @@ File: docs/progress/week3-progress.md – Week 3 progress log
 | README (GitHub front page + reproduction guide) | `README.md` | ✅ Final | Oct 22 |
 | Team technical report (teamwork) | `docs/teamwork.md` | ✅ Final, contributions confirmed by both members | Oct 22 |
 | GitHub repository (public, both members contributing) | https://github.com/Korweey/marrowick-securevault | ✅ | Oct 18–22 |
-| Screen recording of each stage | `evidence/week3/group-h-marrowick-demo.mp4` (6½ min, Git LFS) | ✅ | Oct 22 |
+| Screen recording of each stage | `evidence/week3/group-h-marrowick-demo.mp4` (6 min, Git LFS, resubmitted) | ✅ | Oct 23 |
 | Presentation slides | `presentation/Marrowick_SecureVault_Group_H_Presentation.pptx` | ✅ | Oct 22 |
 | Submission checklist | `SUBMISSION.md` | ✅ | Oct 22 |
 
